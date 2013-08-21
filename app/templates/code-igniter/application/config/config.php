@@ -5,6 +5,18 @@
 | Base Site URL
 |--------------------------------------------------------------------------
 |
+| Project Configs
+|
+*/
+
+$config['project']	= $_ENV["CONFIG"]['project'];
+$config['project_name']	= $config['project']['name'];
+
+/*
+|--------------------------------------------------------------------------
+| Base Site URL
+|--------------------------------------------------------------------------
+|
 | URL to your CodeIgniter root. Typically this will be your base URL,
 | WITH a trailing slash:
 |
@@ -14,7 +26,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= $config['project']['url'];
 
 /*
 |--------------------------------------------------------------------------

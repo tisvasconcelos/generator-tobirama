@@ -1,6 +1,21 @@
 <?php
+date_default_timezone_set('<%=_.trim(timeZone)%>');
 
-$config_array = parse_ini_file("CONFIG.ini", true);
+if(class_exists('Memcache')){
+	$memcache = new Memcache;
+	$memcache->addServer('localhost', 11211);
+
+	if(!$memcache->get('config_array')){
+		$config_array = parse_ini_file("CONFIG.ini", true);
+		$memcache->set('config_array', $config_array, false, 1296000); // 15 days to expire
+	}else{
+		$config_array = $memcache->get('config_array');
+	}
+}else{
+	$config_array = parse_ini_file("CONFIG.ini", true);
+}
+
+$_ENV["CONFIG"] = $config_array;
 
 /*
  *---------------------------------------------------------------

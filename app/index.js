@@ -32,7 +32,7 @@ TobiramaGenerator.prototype.askFor = function askFor() {
     },
     {
       name: 'dbHostname',
-      message: 'Your database hostname? (e.g.: localhost)'
+      message: 'Your database hostname? (e.g.: 127.0.0.1:3306)'
     },
     {
       name: 'dbUsername',
@@ -45,6 +45,10 @@ TobiramaGenerator.prototype.askFor = function askFor() {
     {
       name: 'dbDatabase',
       message: 'Your database name? (e.g.: database_name)'
+    },
+    {
+      name: 'timeZone',
+      message: 'Your time zone? (e.g.: America/Sao_Paulo)'
     }
   ];
 
@@ -52,10 +56,12 @@ TobiramaGenerator.prototype.askFor = function askFor() {
     this.projectName = (props.projectName != "") ? props.projectName : "Project Name";
     this.projectURL = (props.projectURL != "") ? props.projectURL : "http://localhost/";
 
-    this.dbHostname = (props.dbHostname != "") ? props.dbHostname : 'localhost';
+    this.dbHostname = (props.dbHostname != "") ? props.dbHostname : '127.0.0.1:3306';
     this.dbUsername = (props.dbUsername != "") ? props.dbUsername : 'root';
-    this.dbPassword = (props.dbPassword != "") ? props.dbPassword : '';
+    this.dbPassword = (props.dbPassword != "") ? props.dbPassword : 'root';
     this.dbDatabase = (props.dbDatabase != "") ? props.dbDatabase : 'database_name';
+
+    this.timeZone = (props.timeZone != "") ? props.timeZone : 'America/Sao_Paulo';
 
     cb();
   }.bind(this));
@@ -68,7 +74,8 @@ TobiramaGenerator.prototype.app = function app() {
 
   this.copy('_package.json', 'templates/package.json');
 
-  this.copy('code-igniter/index.php', 'index.php');
+  this.template('code-igniter/index.php', 'index.php');
+
   this.copy('code-igniter/license.txt', 'license.txt');
 
   var configText

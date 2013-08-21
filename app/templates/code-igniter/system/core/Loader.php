@@ -128,7 +128,7 @@ class CI_Loader {
 		$this->_ci_helper_paths = array(APPPATH, BASEPATH);
 		$this->_ci_model_paths = array(APPPATH);
 		//$this->_ci_view_paths = array(APPPATH.'views/'	=> TRUE);
-		$this->_ci_view_paths = array(FCPATH.'templates/'	=> TRUE);
+		$this->_ci_view_paths = array(FCPATH.'templates/default/'	=> TRUE);
 
 		log_message('debug', "Loader Class Initialized");
 	}
