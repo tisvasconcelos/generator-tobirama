@@ -82,6 +82,7 @@ TobiramaGenerator.prototype.app = function app() {
     = '[project]'
     + '\nname='+this.projectName
     + '\nurl='+this.projectURL
+    + '\ntemplates=templates/default/'
     + '\n[database]'
     + '\nhost='+this.dbHostname
     + '\ndb='+this.dbDatabase
