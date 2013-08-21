@@ -73,6 +73,7 @@ TobiramaGenerator.prototype.app = function app() {
   this.directory('code-igniter/templates', 'templates');
 
   this.copy('_package.json', 'templates/package.json');
+  this.copy('_htaccess', '.htaccess');
 
   this.template('code-igniter/index.php', 'index.php');
 
