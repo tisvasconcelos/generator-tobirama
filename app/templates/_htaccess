@@ -1,1 +1,1 @@
-RedirectMatch 403 ^.*/sub/folder/index\.php$
+RedirectMatch 403 ^.*/CONFIG\.ini$
