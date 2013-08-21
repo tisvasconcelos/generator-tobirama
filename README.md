@@ -29,7 +29,8 @@ A generator for Yeoman, this generator create a codeigniter (php framework) stru
 - Timezone (default: America/Sao_Paulo)
 
 These settings are in the file CONFIG.ini, located in the project root, you can change it at any time.
-Obs.: You will see that CONFIG.ini have the template path, you can changed if you need.
+
+#### Obs.: You will see that CONFIG.ini have the template path, you can changed if you need.
 
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
