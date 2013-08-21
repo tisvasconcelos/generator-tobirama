@@ -20,12 +20,13 @@ A generator for Yeoman, this generator create a codeigniter (php framework) stru
 
 #### When you run the generator, you have to answer some questions:
 
-- Project Name
-- Prject URL
-- Database hostname
-- Database username
-- Database password
-- Database name
+- Project Name (default: Project Name)
+- Prject URL (default: http://localhost/)
+- Database hostname (default: 127.0.0.1:3306)
+- Database username (default: root)
+- Database password (default: root)
+- Database name (default: database_name)
+- Timezone (default: America/Sao_Paulo)
 
 These settings are in the file CONFIG.ini, located in the project root, you can change it at any time.
 Obs.: You will see that CONFIG.ini have the template path, you can changed if you need.
