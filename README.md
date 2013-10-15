@@ -42,8 +42,8 @@ To avoid reading config.ini to each request, if you have memcache installed on t
 
 Links:
 
-[http://memcached.org/](http://memcached.org/)
-[http://www.php.net/manual/en/book.memcache.php](http://www.php.net/manual/en/book.memcache.php)
+- [http://memcached.org/](http://memcached.org/)
+- [http://www.php.net/manual/en/book.memcache.php](http://www.php.net/manual/en/book.memcache.php)
 
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
