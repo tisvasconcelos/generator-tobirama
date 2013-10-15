@@ -36,7 +36,7 @@ These settings are in the file CONFIG.ini, located in the project root, you can 
 
 ### Last but not least
 
-To avoid reading config.ini to each request, if you have memcache installed on the server and enabled in PHP will be used to cache the project settings, to remove this cache access memcache via terminal and delete the key entered during installation, or change the key ($ memcache_key) within the index.php file.
+To avoid reading CONFIG.ini to each request, if you have memcache installed on the server and enabled in PHP will be used to cache the project settings, to remove this cache access memcache via terminal and delete the key entered during installation, or change the key ($ memcache_key) within the index.php file.
 
 #### Obs.: The cache is set to expire in 15 days.
 
