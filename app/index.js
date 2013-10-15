@@ -49,6 +49,10 @@ TobiramaGenerator.prototype.askFor = function askFor() {
     {
       name: 'timeZone',
       message: 'Your time zone? (e.g.: America/Sao_Paulo)'
+    },
+    {
+      name: 'memoryName',
+      message: 'These settings you just entered are cached in memory if you have memcache installed.\nEnter the name/key to save these settings: (e.g: config_project)'
     }
   ];
 
@@ -62,6 +66,8 @@ TobiramaGenerator.prototype.askFor = function askFor() {
     this.dbDatabase = (props.dbDatabase != "") ? props.dbDatabase : 'database_name';
 
     this.timeZone = (props.timeZone != "") ? props.timeZone : 'America/Sao_Paulo';
+
+    this.memoryName = (props.memoryName != "") ? props.memoryName : 'config_project';
 
     cb();
   }.bind(this));
