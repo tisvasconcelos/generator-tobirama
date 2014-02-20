@@ -94,7 +94,7 @@ TobiramaGenerator.prototype.app = function app() {
     + '\nhost='+this.dbHostname
     + '\ndb='+this.dbDatabase
     + '\nuser='+this.dbUsername
-    + '\npass='+this.dbPassword;
+    + '\npass="'+this.dbPassword+'"';
 
   this.write('CONFIG.ini', configText);
 };
